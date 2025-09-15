@@ -20,11 +20,34 @@
       box-sizing: border-box;
     }
 
+    /* Timer styling */
+    header {
+      margin-bottom: 20px;
+    }
+
+    #countdown {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .timer-label {
+      font-size: 1rem;
+      color: #bbb;
+    }
+
     img {
       max-width: 90%;
       height: auto;
+      display: none;
     }
 
+    /* Show desktop image on PC */
+    .desktop-img {
+      display: block;
+    }
+
+    /* Footer */
     footer {
       margin-top: auto;
       padding: 15px;
@@ -60,12 +83,27 @@
       img {
         max-width: 100%;
       }
+
+      /* Show mobile image, hide desktop */
+      .desktop-img {
+        display: none;
+      }
+      .mobile-img {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
 
-  <img src="Website Launching.png" alt="Wizards Club Launching Soon">
+  <header>
+    <div id="countdown"></div>
+    <div class="timer-label">Website Launching on 21st September 2025 🎉</div>
+  </header>
+
+  <!-- Images -->
+  <img src="Website Launching.png" alt="Wizards Club Launching Soon" class="desktop-img">
+  <img src="Website Launching mobile.png" alt="Wizards Club Launching Soon Mobile" class="mobile-img">
 
   <footer>
     Made With <span>❤</span> | Copyright 2025 © thewiz4rds aka THE WIZARDS CLUB
@@ -74,6 +112,33 @@
     </p>
     <p>Contact : <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p>
   </footer>
+
+  <script>
+    // Set launch date (21 Sept 2025 00:00:00)
+    const launchDate = new Date("Sep 21, 2025 00:00:00").getTime();
+
+    const countdown = document.getElementById("countdown");
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "🚀 We Are Live!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
 
 </body>
 </html>
