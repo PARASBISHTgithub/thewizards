@@ -29,9 +29,17 @@
     }
 
     #countdown {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
-      color: #fff;
+      background: linear-gradient(90deg, #ff0066, #ffcc00, #00e6e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 8px #ff0066; }
+      to { text-shadow: 0 0 15px #00e6e6; }
     }
 
     .timer-label {
@@ -53,24 +61,46 @@
     /* Footer */
     footer {
       margin-top: auto;
-      padding: 15px;
+      padding: 20px;
       font-size: 0.9rem;
       text-align: center;
       color: #bbb;
-      line-height: 1.5;
+      line-height: 1.6;
+      background: #111;
+      border-top: 2px solid #ff0066;
     }
 
     footer span {
-      color: red;
+      color: #ff0066;
     }
 
     footer a {
-      color: #fff;
+      color: #ffcc00;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #00e6e6;
+      text-shadow: 0 0 8px #00e6e6;
+    }
+
+    /* Footer icons */
+    footer .icons a {
+      margin: 0 8px;
+      display: inline-block;
+      transform: scale(1);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    footer .icons a:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 6px #ffcc00);
+    }
+
+    footer img {
+      width: 24px;
+      filter: invert(90%);
     }
 
     /* Responsive adjustments */
@@ -108,9 +138,34 @@
   <img src="Website Launching.png" alt="Wizards Club Launching Soon" class="desktop-img">
   <img src="Website Launching mobile.png" alt="Wizards Club Launching Soon Mobile" class="mobile-img">
 
-  <footer> Made With <span>❤ </span> | Copyright 2025 © thewiz4rds aka THE WIZARDS CLUB 
-    <p>Follow us on Instagram: <a href="https://instagram.com/thewizardsgehu" target="_blank">@thewizardsgehu</a> 
-    </p> <p>Contact : <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p>
+  <footer>
+    <p>
+      Made With <span>❤</span> | Copyright © 2025  
+      <strong style="color:#ffcc00;">thewiz4rds</strong> aka <strong>THE WIZARDS CLUB</strong>
+    </p>
+    
+    <p>
+      Follow us on 
+      <a href="https://instagram.com/thewizardsgehu" target="_blank">
+        Instagram @thewizardsgehu
+      </a>
+    </p>
+
+    <p>
+      Contact: 
+      <a href="mailto:thewizards@gehu.ac.in">
+        thewizards@gehu.ac.in
+      </a>
+    </p>
+    
+    <div class="icons">
+      <a href="https://instagram.com/thewizardsgehu" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="mailto:thewizards@gehu.ac.in">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+      </a>
+    </div>
   </footer>
 
 
@@ -143,6 +198,3 @@
 
 </body>
 </html>
-
-
-
