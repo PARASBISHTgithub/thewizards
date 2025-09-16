@@ -61,7 +61,7 @@
     /* Footer */
     footer {
       margin-top: auto;
-      padding: 20px;
+      padding: 25px 15px;
       font-size: 0.9rem;
       text-align: center;
       color: #bbb;
@@ -86,21 +86,43 @@
     }
 
     /* Footer icons */
-    footer .icons a {
-      margin: 0 8px;
+    .icons {
+      margin: 12px 0;
+    }
+
+    .icons a {
+      margin: 0 10px;
       display: inline-block;
-      transform: scale(1);
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    footer .icons a:hover {
+    .icons a:hover {
       transform: scale(1.2);
       filter: drop-shadow(0 0 6px #ffcc00);
     }
 
-    footer img {
-      width: 24px;
+    .icons img {
+      width: 28px;
       filter: invert(90%);
+    }
+
+    /* Join button */
+    .join-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, #ff0066, #ffcc00);
+      color: #000;
+      font-weight: bold;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .join-btn:hover {
+      background: linear-gradient(90deg, #ffcc00, #00e6e6);
+      color: #111;
+      box-shadow: 0 0 10px #ffcc00;
     }
 
     /* Responsive adjustments */
@@ -111,10 +133,16 @@
 
       footer {
         font-size: 0.8rem;
+        padding: 20px 10px;
       }
 
-      img {
-        max-width: 100%;
+      .icons img {
+        width: 24px;
+      }
+
+      .join-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
       }
 
       /* Show mobile image, hide desktop */
@@ -144,20 +172,6 @@
       <strong style="color:#ffcc00;">thewiz4rds</strong> aka <strong>THE WIZARDS CLUB</strong>
     </p>
     
-    <p>
-      Follow us on 
-      <a href="https://instagram.com/thewizardsgehu" target="_blank">
-        Instagram @thewizardsgehu
-      </a>
-    </p>
-
-    <p>
-      Contact: 
-      <a href="mailto:thewizards@gehu.ac.in">
-        thewizards@gehu.ac.in
-      </a>
-    </p>
-    
     <div class="icons">
       <a href="https://instagram.com/thewizardsgehu" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
@@ -166,13 +180,16 @@
         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
       </a>
     </div>
-  </footer>
 
+    <p>Follow us on <a href="https://instagram.com/thewizardsgehu" target="_blank">@thewizardsgehu</a></p>
+    <p>Contact: <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p>
+
+    <a href="https://forms.gle/LZ47Bwe2dKAKSFBbA" target="_blank" class="join-btn">✨ Join Our Club</a>
+  </footer>
 
   <script>
     // Set launch date (21 Sept 2025 00:00:00)
     const launchDate = new Date("Sep 21, 2025 00:00:00").getTime();
-
     const countdown = document.getElementById("countdown");
 
     function updateTimer() {
