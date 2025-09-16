@@ -64,12 +64,84 @@
       display: block;
     }
 
-      /* Show mobile image, hide desktop */
-      .desktop-img {
-        display: none;
+    /* Show mobile image, hide desktop */
+    .desktop-img {
+      display: none;
+    }
+    .mobile-img {
+      display: block;
+    }
+
+    /* Footer styling */
+    footer {
+      margin-top: 40px;
+      padding: 20px 15px;
+      width: 100%;
+      max-width: 600px;
+      background: linear-gradient(135deg, #ff0066, #ffcc00, #00e6e6);
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00e6e6;
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    footer p {
+      margin: 0;
+      color: #000;
+    }
+
+    footer a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ff0066;
+      text-decoration: underline;
+    }
+
+    .footer-contact {
+      font-size: 0.9rem;
+      color: #222;
+    }
+
+    .join-btn {
+      background: #000;
+      color: #ffcc00;
+      border: 2px solid #ffcc00;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      box-shadow: 0 0 8px #ffcc00;
+    }
+
+    .join-btn:hover {
+      background: #ffcc00;
+      color: #000;
+      box-shadow: 0 0 15px #ffcc00;
+    }
+
+    /* Responsive footer text */
+    @media (max-width: 400px) {
+      footer {
+        font-size: 0.9rem;
+        padding: 15px 10px;
       }
-      .mobile-img {
-        display: block;
+      .join-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -91,6 +163,16 @@
     alt="Wizards Club Launching Soon Mobile"
     class="mobile-img"
   />
+
+  <footer>
+    <p>© The Wizards Club 2025</p>
+    <p>
+      Follow Us On Instagram: 
+      <a href="https://instagram.com/thewizardsgehu" target="_blank" rel="noopener noreferrer">@thewizardsgehu</a>
+    </p>
+    <p class="footer-contact">Contact us: <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p>
+    <button class="join-btn" onclick="alert('Thank you for your interest! Stay tuned for joining details.')">Join Our Club</button>
+  </footer>
 
   <script>
     // Set launch date (21 Sept 2025 00:00:00)
@@ -121,5 +203,3 @@
   </script>
 </body>
 </html>
-
-
