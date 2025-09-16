@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Wizards Club - Launching Soon</title>
-  <meta name="description" content="The Wizards Club – A community of innovators, gamers, and creators coming together to explore technology, gaming, and 
-  creativity. Join us for events, competitions, and collaborations as we launch something extraordinary soon!">
+  <meta
+    name="description"
+    content="The Wizards Club – A community of innovators, gamers, and creators coming together to explore technology, gaming, and creativity. Join us for events, competitions, and collaborations as we launch something extraordinary soon!"
+  />
 
   <style>
     body {
@@ -38,8 +40,12 @@
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 8px #ff0066; }
-      to { text-shadow: 0 0 15px #00e6e6; }
+      from {
+        text-shadow: 0 0 8px #ff0066;
+      }
+      to {
+        text-shadow: 0 0 15px #00e6e6;
+      }
     }
 
     .timer-label {
@@ -62,12 +68,33 @@
     footer {
       margin-top: auto;
       padding: 25px 15px;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #bbb;
-      line-height: 1.6;
       background: #111;
       border-top: 2px solid #ff0066;
+    }
+
+    footer .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #bbb;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    footer .footer-left {
+      flex: 1 1 300px;
+    }
+
+    footer .footer-right {
+      flex: 1 1 300px;
+      text-align: right;
+    }
+
+    footer .footer-right p {
+      margin: 4px 0;
     }
 
     footer span {
@@ -132,8 +159,17 @@
       }
 
       footer {
-        font-size: 0.8rem;
         padding: 20px 10px;
+      }
+
+      footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .footer-right {
+        text-align: center;
+        margin-top: 10px;
       }
 
       .icons img {
@@ -156,19 +192,42 @@
   </style>
 </head>
 <body>
-
   <header>
     <div id="countdown"></div>
     <div class="timer-label">Website Launching on 21st September 2025 🎉</div>
   </header>
 
   <!-- Images -->
-  <img src="Website Launching.png" alt="Wizards Club Launching Soon" class="desktop-img">
-  <img src="Website Launching mobile.png" alt="Wizards Club Launching Soon Mobile" class="mobile-img">
+  <img
+    src="Website Launching.png"
+    alt="Wizards Club Launching Soon"
+    class="desktop-img"
+  />
+  <img
+    src="Website Launching mobile.png"
+    alt="Wizards Club Launching Soon Mobile"
+    class="mobile-img"
+  />
 
-  <footer> Made With <span>❤</span> | Copyright 2025 © thewiz4rds aka THE WIZARDS CLUB <p>Follow us on Instagram:<a href="https://instagram.com/thewizardsgehu" target="_blank">@thewizardsgehu</a> </p> 
-    <p>Contact : <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p> </footer>
-
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        Made With <span>❤</span> | Copyright 2025 © thewiz4rds aka THE WIZARDS CLUB
+      </div>
+      <div class="footer-right">
+        <p>
+          Follow us on Instagram:
+          <a href="https://instagram.com/thewizardsgehu" target="_blank"
+            >@thewizardsgehu</a
+          >
+        </p>
+        <p>
+          Contact:
+          <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Set launch date (21 Sept 2025 00:00:00)
@@ -185,7 +244,9 @@
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -195,10 +256,5 @@
     setInterval(updateTimer, 1000);
     updateTimer();
   </script>
-
 </body>
 </html>
-
-
-
-
