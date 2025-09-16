@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Wizards Club - Launching Soon</title>
-  <meta name="description" content="The Wizards Club – A community of innovators, gamers, and creators coming together to explore technology, gaming, and 
-  creativity. Join us for events, competitions, and collaborations as we launch something extraordinary soon!">
+  <meta
+    name="description"
+    content="The Wizards Club – A community of innovators, gamers, and creators coming together to explore technology, gaming, and creativity. Join us for events, competitions, and collaborations as we launch something extraordinary soon!"
+  />
 
   <style>
     body {
@@ -50,29 +52,6 @@
       display: block;
     }
 
-    /* Footer */
-    footer {
-      margin-top: auto;
-      padding: 15px;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #bbb;
-      line-height: 1.5;
-    }
-
-    footer span {
-      color: red;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
     /* Responsive adjustments */
     @media (max-width: 600px) {
       body {
@@ -95,21 +74,79 @@
         display: block;
       }
     }
+
+    /* Footer styling */
+    footer {
+      margin-top: auto;
+      padding: 20px 15px;
+      width: 100%;
+      max-width: 600px;
+      background: #111;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00e6e6;
+      color: #bbb;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      user-select: none;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    footer a {
+      color: #00e6e6;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+
+    .join-btn {
+      margin-top: 12px;
+      background: transparent;
+      border: 2px solid #00e6e6;
+      color: #00e6e6;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      display: inline-block;
+    }
+
+    .join-btn:hover {
+      background: #00e6e6;
+      color: #000;
+      box-shadow: 0 0 10px #00e6e6;
+    }
   </style>
 </head>
 <body>
-
   <header>
     <div id="countdown"></div>
     <div class="timer-label">Website Launching on 21st September 2025 🎉</div>
   </header>
 
   <!-- Images -->
-  <img src="Website Launching.png" alt="Wizards Club Launching Soon" class="desktop-img">
-  <img src="Website Launching mobile.png" alt="Wizards Club Launching Soon Mobile" class="mobile-img">
+  <img src="Website Launching.png" alt="Wizards Club Launching Soon" class="desktop-img" />
+  <img src="Website Launching mobile.png" alt="Wizards Club Launching Soon Mobile" class="mobile-img" />
 
- 
-
+  <footer>
+    <p>© The Wizards Club 2025</p>
+    <p>
+      Follow Us On Instagram: 
+      <a href="https://instagram.com/thewizardsgehu" target="_blank" rel="noopener noreferrer">@thewizardsgehu</a>
+    </p>
+    <p>Contact us: <a href="mailto:thewizards@gehu.ac.in">thewizards@gehu.ac.in</a></p>
+    <button class="join-btn" onclick="alert('Thank you for your interest! Stay tuned for joining details.')">Join Our Club</button>
+  </footer>
 
   <script>
     // Set launch date (21 Sept 2025 00:00:00)
@@ -137,8 +174,5 @@
     setInterval(updateTimer, 1000);
     updateTimer();
   </script>
-
 </body>
 </html>
-
-
